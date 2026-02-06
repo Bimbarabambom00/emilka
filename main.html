@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Walentynka ❤️</title>
+
+<style>
+    body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #ffe6eb;
+        font-family: Arial, sans-serif;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 520px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+        margin-bottom: 15px;
+    }
+
+    img {
+        width: 100%;
+        max-height: 52vh;
+        object-fit: cover;
+        border-radius: 12px;
+        margin-bottom: 20px;
+    }
+
+    .buttons {
+        position: relative;
+        margin: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    button {
+        font-size: 1.2rem;
+        padding: 12px 26px;
+        width: 700px;
+        height: 200;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    #yes {
+        background: #ff4d6d;
+        color: white;
+        transform-origin: center;
+        transition: transform 0.25s ease;
+        z-index: 2;
+    }
+
+    #no {
+        background: #cccccc;
+        color: black;
+        z-index: 1;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>❤️Zostaniesz moją walentynką?❤️</h1>
+    <img src="./img1.jpg">
+    <div class="buttons">
+        <button id="yes">Tak👌😘</button>
+        <button id="no">Nie😥</button>
+    </div>
+</div>
+
+<script>
+    let scale = 1;
+    const yes = document.getElementById("yes");
+    const no = document.getElementById("no");
+
+    no.addEventListener("click", () => {
+        scale += 0.25;
+        yes.style.transform = `scale(${scale})`;
+    });
+
+    yes.addEventListener("click", () => {
+        alert("❤️ YUPIII! ❤️");
+    });
+</script>
+
+</body>
+</html>
